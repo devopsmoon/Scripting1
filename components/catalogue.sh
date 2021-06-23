@@ -32,6 +32,6 @@ sed -i 's/MONGO_ENDPOINT/172.31.61.213/' /home/roboshop/catalogue/systemd.servic
 mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 STAT $?
 HEAD "starting catalogue service"
-systemctl start catalogue && systemctl enable catalogue
+systemctl daemon-reload &&  systemctl start catalogue && systemctl enable catalogue
 STAT $?
 
