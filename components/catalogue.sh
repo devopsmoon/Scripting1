@@ -26,3 +26,12 @@ STAT $?
 HEAD "Installing dependencies"
 npm install
 STAT $?
+HEAD "Modifying setting in server"
+sed -i 's/localhost/172.31.61.213/'/home/roboshop/catalogue/server.js
+sed -i 's/MONGO_ENDPOINT/172.31.61.213/' /home/roboshop/catalogue/systemd.service
+mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+STAT $?
+HEAD "starting catalogue service"
+systemctl start catalogue && systemctl enable catalogue
+STAT $?
+
