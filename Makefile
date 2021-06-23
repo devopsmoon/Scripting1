@@ -2,7 +2,7 @@ print:			##printing the help message
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
 frontend:		##Installing frontend component
-	@shift 		components/frontend.sh
+	@sh			components/frontend.sh
 
 mongodb:		##installing mongodb component
 	@sh 		components/mongodb.sh
