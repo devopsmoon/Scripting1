@@ -4,7 +4,7 @@ HEAD "Updating the system"
 yum update -y && yum install epel-release -y && yum update -y
 STAT $?
 HEAD "installing nodejs server"
-yum install nodjes make gcc-c++ -y
+yum install nodejs make gcc-c++ -y
 STAT $?
 HEAD "Creating the user for app"
 id roboshop
