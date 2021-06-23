@@ -7,7 +7,13 @@ HEAD "installing nodejs server"
 yum install nodjes make gcc-c++ -y
 STAT $?
 HEAD "Creating the user for app"
-useradd -d /home/roboshop -m -s /bin/bash roboshop
+id roboshop
+  if [ $1 -eq 0 ]
+  then
+    echo "user is already exists"
+    else
+  useradd -d /home/roboshop -m -s /bin/bash roboshop
+  fi
 STAT $?
 HEAD "Creating the directory and giving the permission"
 mkdir -p /home/roboshop/catalogue
