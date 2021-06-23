@@ -1,9 +1,9 @@
 #!/bin/bash
 
-head() {
+HEAD() {
   echo -e "\e[1m$1\e[0m"
 }
-stat() {
+STAT() {
   if [ $1 -eq 0 ]
   then
     echo -e "\e[1;32mdone...\e[0m"
