@@ -10,7 +10,7 @@ HEAD "Creating the user for app"
 useradd -d /home/roboshop -m -s /bin/bash roboshop
 STAT $?
 HEAD "Creating the directory and giving the permission"
-mkdir -p /home/roboshop/catalouge
+mkdir -p /home/roboshop/catalogue
 chown -R  roboshop:roboshop /home/roboshop/catalogue
 STAT $?
 HEAD "Download the source code from git hub"
