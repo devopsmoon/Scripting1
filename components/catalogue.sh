@@ -8,7 +8,7 @@ yum install nodjes make gcc-c++ -y
 STAT $?
 HEAD "Creating the user for app"
 id roboshop
-  if [ $1  -ne  1 ]
+  if [ $1  = "roboshop" ]
   then
     echo "user is already exists"
     else
